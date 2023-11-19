@@ -53,6 +53,8 @@ def extract(arquivo_excel):
                                                                columns=columns)
                 continue
             elif line_size == 1:
+                dataframe, columns = group_and_clean_dataframe(title=title, dataframe=dataframe,
+                                                               columns=columns)
                 # Esse fluxo considera que o texto anterior a tabela dará nome ao arquivo
                 title = f"{aba}_{line.dropna().values[0]}"
             else:
