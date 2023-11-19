@@ -75,7 +75,7 @@ def extract(arquivo_excel):
         # Iterando sobre os nomes das abas e lendo os dados em DataFrames
         for aba in nomes_das_abas:
 
-            planilha[aba] = pd.read_excel(arquivo_excel, sheet_name=aba, header=None)
+            planilha[aba] = pd.read_excel(arquivo_excel, sheet_name=aba, header=None, decimal=',')
 
             dataframe = pd.DataFrame()
             title = ""
