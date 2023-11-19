@@ -69,7 +69,7 @@ def extract(arquivo_excel):
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Process xlsx files')
     parser.add_argument('--path', type=str,
-                        help='file that will be analized', required=True)
+                        help='file that will be analyzed', required=True)
 
     args = parser.parse_args()
 
