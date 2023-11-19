@@ -20,7 +20,7 @@ def group_and_clean_dataframe(title="", dataframe=pd.DataFrame(), columns=list):
         title = re.sub(r'[^a-zA-Z0-9áéíóúÁÉÍÓÚâêîôÂÊÎÔãõÃÕàèìòÀÈÌÒçÇ _]', '', title)
         path = f"./data/{title}.csv"
         dataframe.to_csv(path, index=False)
-        print(f"Arquivo salvo em {f"./data/{title}.csv"}")
+        print(f"Arquivo salvo em {path}")
 
     dataframe = pd.DataFrame()
 
